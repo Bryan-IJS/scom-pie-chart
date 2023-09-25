@@ -49,13 +49,13 @@ define("@scom/scom-pie-chart/global/utils.ts", ["require", "exports", "@ijstech/
         }
         const absNum = Math.abs(num);
         if (absNum >= 1000000000) {
-            return components_1.FormatUtils.formatNumber((num / 1000000000), { decimalFigures: decimals || 3 }) + 'B';
+            return components_1.FormatUtils.formatNumber((num / 1000000000), { decimalFigures: decimals }) + 'B';
         }
         if (absNum >= 1000000) {
-            return components_1.FormatUtils.formatNumber((num / 1000000), { decimalFigures: decimals || 3 }) + 'M';
+            return components_1.FormatUtils.formatNumber((num / 1000000), { decimalFigures: decimals }) + 'M';
         }
         if (absNum >= 1000) {
-            return components_1.FormatUtils.formatNumber((num / 1000), { decimalFigures: decimals || 3 }) + 'K';
+            return components_1.FormatUtils.formatNumber((num / 1000), { decimalFigures: decimals }) + 'K';
         }
         if (absNum < 0.0000001) {
             return components_1.FormatUtils.formatNumber(num, { decimalFigures: 0 });
